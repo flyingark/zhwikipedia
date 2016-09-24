@@ -9,7 +9,11 @@ tradpattern = re.compile( big5 )
 simppattern = re.compile( gbk )
 
 def add_traditional( prevtext, currtext ):
-    traditional = False
+    '''
+    compare current text with previous text
+    determine how many characters with different simple and traditional versions are added
+    determine how many characters are added with tradiditional version
+    '''
     tradprevtext = Counter( tradpattern.findall( prevtext ) )
     simpprevtext = Counter( simppattern.findall( prevtext ) )
     tradcurrtext = Counter( tradpattern.findall( currtext ) )

@@ -57,14 +57,14 @@ def extract_namespace( elem ):
         return 0
 
 def get_text_size( text ):
-    """return a tuple containing bytesize and charsize of the text"""
+    """return bytesize of the text and the number of characters in the text"""
     try:
         return ( len( text.encode( 'utf-8' ) ), len( text ) )
     except:
         return "NaN", "NaN"
 
 def get_editor_info( elem ):
-    """parse <contributor> element and return an editor instance"""
+    """read a contributor element and return an editor instance"""
     try:
         id = extract_id( elem.find( '{http://www.mediawiki.org/xml/export-0.3/}id' ) )
         name = extract_text( elem.find( '{http://www.mediawiki.org/xml/export-0.3/}username' ) )
@@ -74,7 +74,7 @@ def get_editor_info( elem ):
         return Editor()
 
 def get_page_info( elem ):
-    """parse <page> element and return an page instance"""
+    """read a page element and return an page instance"""
     try:
         id = extract_id( elem.find( '{http://www.mediawiki.org/xml/export-0.3/}id' ) )
         name = extract_text( elem.find( '{http://www.mediawiki.org/xml/export-0.3/}title' ) )
@@ -84,7 +84,7 @@ def get_page_info( elem ):
         return Page()
 
 def get_revision_info( elem, page, previd, prevtext ):
-    """parse <revision> element and return an revision instance""" 
+    """read a revision element and return an revision instance""" 
     try:
         id = extract_id( elem.find( '{http://www.mediawiki.org/xml/export-0.3/}id' ) )
         timestamp = extract_time( elem.find( '{http://www.mediawiki.org/xml/export-0.3/}timestamp' ) )
@@ -209,6 +209,6 @@ def export_revision_info( revision, fo_id, fe_id ):
         fo_id.write( '\"' + str( revision.addtradcharsize ) + '\"' )
     except:
         fo_id.write( '\"' + "NaN" + '\"' )
-        fe_id.write( "15" + '\t' )
+        fe_id.write( "16" + '\t' )
     fo_id.write( '\n' )
     fe_id.write( '\n' )

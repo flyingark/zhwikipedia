@@ -1,3 +1,5 @@
+# read revision from zhwikipedia datadump and export to a csv file
+
 import sys
 import csv
 import codecs

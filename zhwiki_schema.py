@@ -1,3 +1,5 @@
+# create class for editor, page and revision
+
 import datetime
 
 class Editor:

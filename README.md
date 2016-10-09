@@ -1,10 +1,20 @@
-# zhwikipedia
+# Zhwikipedia
 ## Description of Files
+### Data File
 * ```zhwiki-20061208-pages-meta-history.xml```: original xml file from Wikimedia including the entire editing history of the Chinese Wikipedia up to 2006/12/08.
+* ```revision.csv```: containing each revision parsed from the orignal xml file, not including information on reverts or tag for real editor, bot editor or ip editor.
+* ```revision_withreverts.csv```: adding two columns to ```revision.csv``` indicating reverting.
+* ```revision_full.csv```: modify editor information indicating real editor, bot or ip editor.
+
+### Result File
+* ```numrev_2005-06-19T00:00:00_2005-09-19T00:00:00.csv```: including number of revisions, revertings and reverteds in each article between 2005/06/19 and 2005/09/19 (three months before the block)
+* ```numrev_2005-09-19T00:00:00_2005-12-19T00:00:00.csv```: including number of revisions, revertings and reverteds in each article between 2005/09/19 and 2005/12/19 (three months after the block)
+* ```workload_2005-06-19T00:00:00_2005-09-19T00:00:00.csv```: including workload information in each article between 2005/06/19 and 2005/09/19 (three months before the block)
+* ```workload_2005-09-19T00:00:00_2005-12-19T00:00:00.csv```: including workload information in each article between 2005/09/19 and 2005/12/19 (three months after the block)
 
 
 ## Prepare Data
-### 01 Parse zhwikipedia
+### 01 Parse Zhwikipedia
 * parse data dump of Chinese Wikipedia data/zhwiki-20061208-pages-meta-history.xml
 * export to data/revisions.csv
 * ```python export_revision.py data/zhwiki-20061208-pages-meta-history.xml data/revisions.csv```

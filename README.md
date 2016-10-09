@@ -17,7 +17,7 @@
 * reformat the csv file and generate revision_full.csv
 * editor described in columns 5 (editor id, -1 for bot and ip editor), 6 (editor name, ip for ip editor) and 7 (0 for real editor, 1 for bot, 2 for ip editor).
 * export to data/revision_full.csv
-* ```python identify_bot.py
+* ```python identify_bot.py```
 
 ### 04 Create Editors File
 * calculate proportion of simplified and traditional Chinese used by editors

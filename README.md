@@ -1,4 +1,5 @@
 # zhwikipedia
+==========
 
 ## Prepare Data
 ### 01 Parse zhwikipedia
@@ -19,8 +20,8 @@
 * export to data/revision_full.csv
 * ```python identify_bot.py```
 
-### 04 Create Editors File
+### 04 Create Editors File (needs to be repaired)
 * calculate proportion of simplified and traditional Chinese used by editors
 * determine if editors ever contributed in any block
-* export to data/editors.csv
+* export to data/editors.cs
 

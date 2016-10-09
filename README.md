@@ -1,5 +1,7 @@
 # zhwikipedia
-==========
+## Description of Files
+* ```zhwiki-20061208-pages-meta-history.xml```: original xml file from Wikimedia including the entire editing history of the Chinese Wikipedia up to 2006/12/08.
+
 
 ## Prepare Data
 ### 01 Parse zhwikipedia
